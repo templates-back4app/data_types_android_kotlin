@@ -3,7 +3,6 @@ package com.emre.datatypeskotlin
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -33,11 +32,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         progressDialog = ProgressDialog(this@MainActivity)
-
         val saveData = findViewById<Button>(R.id.saveData)
         val readData = findViewById<Button>(R.id.readData)
         val updateData = findViewById<Button>(R.id.updateData)
-
 
         saveData.setOnClickListener {
             try {
@@ -46,9 +43,7 @@ class MainActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-
         readData.setOnClickListener { readObjects() }
-
         updateData.setOnClickListener { updateObject() }
     }
 
@@ -126,11 +121,11 @@ class MainActivity : AppCompatActivity() {
 
                 val list: MutableList<Data> = ArrayList()
                 list.add(Data("Int list field", obj.get("listIntField").toString()))
-                list.add(Data("String field",obj.get("stringField").toString()))
+                list.add(Data("String field", obj.get("stringField").toString()))
                 list.add(Data("Double field", obj.get("doubleField").toString()))
                 list.add(Data("Int field", obj.get("intField").toString()))
                 list.add(Data("String list field", obj.get("listStringField").toString()))
-                list.add(Data("Date field",obj.get("dateField").toString()))
+                list.add(Data("Date field", obj.get("dateField").toString()))
                 list.add(Data("Bool field", obj.get("boolField").toString()))
                 list.add(Data("List Bool field", obj.get("listBoolField").toString()))
                 list.add(Data("Json Object field", obj.get("jsonObject").toString()))
