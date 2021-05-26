@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
         if (objectId == null) {
             Toast.makeText(
                 this,
-                "None objectId. Click  Save Data button before.",
+                "No objectId. Click  Save Data button before.",
                 Toast.LENGTH_SHORT
             ).show()
             return
@@ -142,7 +142,7 @@ class MainActivity : AppCompatActivity() {
         if (objectId == null) {
             Toast.makeText(
                 this,
-                "None objectId. Click  Save Data button before.",
+                "No objectId. Click  Save Data button before.",
                 Toast.LENGTH_SHORT
             ).show()
             return
