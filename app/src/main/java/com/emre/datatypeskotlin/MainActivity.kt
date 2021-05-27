@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun saveDataTypes() {
         val parseObject = ParseObject("DataTypes")
-
+        parseObject.save()
         parseObject.put("stringField", "String")
         parseObject.put("doubleField", 1.5)
         parseObject.put("intField", 2)
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         parseObject.saveInBackground {
             progressDialog?.dismiss()
             if (it == null) {
-                Toast.makeText(this, "Object saved successfully...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Object created successfully...", Toast.LENGTH_SHORT).show()
                 objectId = parseObject.objectId
             } else {
                 objectId = null
@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
         parseObject.saveInBackground {
             progressDialog?.dismiss()
             if (it == null) {
-                Toast.makeText(this, "Object saved successfully...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Object updated successfully...", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
             }
